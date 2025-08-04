@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="dashbord admin.css"/>
+  <title>Dashboard Admin - Winner Agency</title>
+</head>
+<body>
+
+     <nav>
+    <div class="logo">Winner Agency</div>
+    <ul class="nav-main">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li class="dropdown">
+        <a href="user space">user space ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="connection.html">Connection</a></li>
+          <li><a href="registation.html">registration</a></li>
+          <li><a href="userspace.html">user space</a></li>
+          <li><a href="dashclient.html">Dashboard client</a></li>
+          <li><a href="dashadmin.html">Dashboard admin</a></li>
+        </ul>
+      </li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+  <main class="dashboard">
+    <h1>Admin panel</h1>
+    <div class="cards">
+      <div class="card" onclick="alert('25 registered users')">
+        <h3>Users</h3>
+        <p>Manage client accounts</p>
+      </div>
+      <div class="card" onclick="alert('10 pending reservations.')">
+        <h3>Reservations</h3>
+        <p>Approve or reject requests</p>
+      </div>
+      <div class="card" onclick="alert('Téléversement de fichiers')">
+        <h3>contents</h3>
+        <p>Add or modify delivered files</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Winner Agency — All rights reserved
+  </footer>
+
+  <script >
+    
+javascript
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("Dashboard admin prêt.");
+});
+
+  </script>
+</body>
+</html>
+
+
+
+
+

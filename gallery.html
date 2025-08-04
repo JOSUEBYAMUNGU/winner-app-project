@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="gallery.css" />
+  <title>Gallery - Winner Agency</title>
+</head>
+<body>
+
+    <nav>
+    <div class="logo">Winner Agency</div>
+    <ul class="nav-main">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li class="dropdown">
+        <a href="user space">user space ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="connection.html">Connection</a></li>
+          <li><a href="registation.html">registration</a></li>
+          <li><a href="userspace.html">user space</a></li>
+          <li><a href="dashclient.html">Dashboard client</a></li>
+          <li><a href="dashadmin.html">Dashboard admin</a></li>
+        </ul>
+      </li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+  <header class="galerie-header">
+    <h1>Gallery</h1>
+    <p>Some previews of our achievements.</p>
+  </header>
+  <section class="galerie-grid">
+    <div class="photo"><img src="img1.jpg" alt="Image 1"></div>
+    <div class="photo"><img src="img2.jpg" alt="Image 2"></div>
+    <div class="photo"><img src="img3.jpg" alt="Image 3"></div>
+    <div class="photo"><img src="img4.jpg" alt="Image 4"></div>
+    <div class="photo"><img src="img5.jpg" alt="Image 5"></div>
+    <div class="photo"><img src="img6.jpg" alt="Image 6"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Winner Agency — All rights reserved.</p>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+      { src: "img1.jpg", alt: "Mariage" },
+      { src: "img2.jpg", alt: "Anniversaire" },
+      { src: "img3.jpg", alt: "Shooting" }
+    ];
+
+    const galerie = document.getElementById("galerie-container");
+    if (!galerie) return;
+
+    images.forEach(img => {
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      const caption = document.createElement("figcaption");
+
+      image.src = img.src;
+      image.alt = img.alt;
+      caption.textContent = img.alt;
+
+      figure.appendChild(image);
+      figure.appendChild(caption);
+      galerie.appendChild(figure);
+    });
+  });
+</script>
+
+</body>
+</html>

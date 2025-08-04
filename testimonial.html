@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="testimonial.css" />
+  <title>testimonial - Winner Agency</title>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Winner Agency</div>
+    <ul class="nav-main">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li class="dropdown">
+        <a href="userspace.html">user space ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="connection.html">Connection</a></li>
+          <li><a href="registation.html">registration</a></li>
+          <li><a href="userspace.html">user space</a></li>
+          <li><a href="dashclient.html">Dashboard client</a></li>
+          <li><a href="dashadmin.html">Dashboard admin</a></li>
+        </ul>
+      </li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+  <header class="temoignage-header">
+    <h1>What our clients say.</h1>
+    <p>The experiences shared by those who have trusted us.</p>
+  </header>
+
+  <section class="temoignage-section" id="temoignages-container">
+    <!-- Témoignages injectés par JS -->
+  </section>
+
+  <footer>
+    <p>© 2025 Winner Agency — All rights reserved.</p>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const temoignages = [
+      { nom: "Claire N.", message: "Un service impeccable pour notre mariage, photos magnifiques !" },
+      { nom: "Jean-Paul M.", message: "Très professionnels et à l’écoute. Merci Winner Agency !" },
+      { nom: "Fatou B.", message: "Une expérience inoubliable. Vidéos de qualité, équipe ponctuelle." }
+    ];
+
+    const container = document.getElementById("temoignages-container");
+    if (!container) return;
+
+    temoignages.forEach(t => {
+      const div = document.createElement("div");
+      div.className = "temoignage";
+      div.innerHTML = `
+        <p class="message">"t.message"</p>
+        <p class="auteur">-{t.nom}</p>
+      `;
+      container.appendChild(div);
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+

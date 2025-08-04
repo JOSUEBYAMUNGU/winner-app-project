@@ -1,0 +1,144 @@
+
+
+
+
+
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Nav principal */
+nav {
+  background-color: #8b0000; /* rouge foncé */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-main {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-main > li {
+  position: relative;
+}
+
+.nav-main > li > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-main > li > a:hover {
+  background-color: #a80000;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #a80000;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  padding: 10px;
+  color: white;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #b22222;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-main > li > a {
+    width: 100%;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #b30000;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  width: 250px;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover {transform: translateY(-5px);
+  background-color: #fff6f6;
+}
+
+.card h3 {
+  color: #b30000;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

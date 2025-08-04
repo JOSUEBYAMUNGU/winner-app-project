@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="userspace.css" />
+  <title>user space - Winner Agency</title>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Winner Agency</div>
+    <ul class="nav-main">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li class="dropdown">
+        <a href="userspace.html">user space ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="connection.html">Connection</a></li>
+          <li><a href="registation.html">registration</a></li>
+          <li><a href="userspace.html">user space</a></li>
+          <li><a href="dashclient.html">Dashboard client</a></li>
+          <li><a href="dashadmin.html">Dashboard admin</a></li>
+        </ul>
+      </li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+  <main class="client-area">
+    <h1>Welcome to your client area.</h1>
+    <p>View your reservations, invoices, and delivered content.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>My Reservations.</h2>
+        <p>View and manage your past and upcoming reservations.</p>
+        <a href="#" class="btn">view</a>
+      </div>
+      <div class="card">
+        <h2>My files</h2>
+        <p>Access your delivered photos, videos, or documents.</p>
+        <a href="#" class="btn">access</a>
+      </div>
+      <div class="card">
+        <h2>Support</h2>
+        <p>Contact our team for any assistance.</p>
+        <a href="#" class="btn">to contact.</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+   © 2025 Winner Agency — All rights reserved.
+  </footer>
+
+
+
+
+
+
+  
+  <script >
+    // Gérer le dropdown au clic (pour mobile/tablettes)
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', e => {
+    e.preventDefault();
+    const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true' || false;
+    dropdownToggle.setAttribute('aria-expanded', !expanded);
+    dropdownMenu.style.display = expanded ? 'none' : 'block';
+  });
+
+  // Fermer le menu si on clique ailleurs
+  document.addEventListener('click', e => {
+    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.style.display = 'none';
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="contact.css" />
+  <title>Contact - Winner Agency</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">Winner Agency</div>
+    <ul class="nav-main">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li class="dropdown">
+        <a href="user space">user space ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="connection.html">Connection</a></li>
+          <li><a href="registation.html">registration</a></li>
+          <li><a href="userspace.html">user space</a></li>
+          <li><a href="dashclient.html">Dashboard client</a></li>
+          <li><a href="dashadmin.html">Dashboard admin</a></li>
+        </ul>
+      </li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact Winner Agency</h1>
+    <p>We are here to meet your needs</p>
+  </header>
+
+  <main class="contact-wrapper">
+    <section class="contact-form" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact form</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required placeholder="exemple@domaine.com" />
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Votre message ici"></textarea>
+
+        <button type="submit">send</button>
+      </form>
+    </section>
+
+    <section class="infos" aria-labelledby="infos-title">
+      <h2 id="infos-title">our informations</h2>
+      <p><strong>Email :</strong> contact@winneragency.com</p>
+      <p><strong>phone :</strong> +257 79 000 000</p>
+      <p><strong>Adresse :</strong> Bujumbura, Burundi</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Winner Agency. All rights reserved.</p>
+  </footer>
+
+
+  <!--adding js-->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Dropdown toggle for mobile
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+      const dropdownMenu = document.querySelector(".dropdown-menu");
+
+      dropdownToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const expanded = dropdownToggle.getAttribute("aria-expanded") === "true";
+        dropdownToggle.setAttribute("aria-expanded", String(!expanded));
+        dropdownMenu.style.display = expanded ? "none" : "block";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.style.display = "none";
+          dropdownToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Form validation
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (name.length < 2) {
+          alert("Please enter a valid name..");
+          form.name.focus();
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert("please entrer a valid email .");
+          form.email.focus();
+          return;
+        }
+
+        if (message.length < 10) {
+          alert("Your message must contain at least 10 characters.");
+          form.message.focus();
+          return;
+        }
+
+        alert("Thank you for your message. We will respond to you promptly.");
+        form.reset();
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.toLowerCase());
+      }
+    });
+  </script>
+</body>
+</html>
+
+
