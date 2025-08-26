@@ -20,6 +20,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+}
+.navbar{
+  
 }
 
 .logo {
@@ -77,16 +82,17 @@ nav {
 
 /* Hero section */
 .hero {
-  background-image: url('hero-image.jpg'); /* Remplacer par ton image */
+  background-image:url('photo-1486492440844-ebc195542a40\ -\ Copie.jpeg') ; /* Remplacer par ton image */
   background-size: cover;
   background-position: center;
   height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(102, 96, 96);
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 0 20px;
+ padding: 0 20px;
+  
 }
 
 .hero-text h1 {
@@ -156,3 +162,50 @@ footer {
     font-size: 1rem;
   }
 }
+
+
+
+
+.barmobile{
+  width: 5vw;
+  height: 5vh;
+  display: none;
+}
+.menu-mobile{
+  background-color:#8b0000 ;
+  width: 25vw;
+  font-size: 20px;
+  position: fixed;
+  right: 0%;
+  padding: 10px;
+  height: 100%;
+  pointer-events: none;
+  display: none;
+}
+.menu-mobile ul{
+  list-style: none;
+}
+.menu-mobile ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+@media(min-width:0px) and(max-width:500px) {
+  .barmobile{
+  width: 5vw;
+  height: 5vh;
+  display: block;
+}
+.blocnav{
+  display: none;
+}
+}
+
+
+
+
+
+
+

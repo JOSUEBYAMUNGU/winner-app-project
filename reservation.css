@@ -140,11 +140,19 @@ form button {
 form button:hover {
   background-color: #990000;
 }
-
+/* 
 footer {
+  background-color: #8b0000;
+  color: white;
   text-align: center;
   padding: 20px;
-  background-color: #111;
+}
+*/
+/* Footer */
+footer {
+  background-color: #8b0000;
   color: white;
-  margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  
 }

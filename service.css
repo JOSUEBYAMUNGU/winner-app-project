@@ -144,10 +144,23 @@ body {
   margin-bottom: 10px;
 }
 
+
+
+/*
 footer {
   background-color: #8b0000;
   color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+*/
+
+/* Footer */
+footer {
+  background-color: #8b0000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 225px;
 }
