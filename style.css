@@ -12,6 +12,62 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+/*
+nav{
+ display: flex;
+ justify-content: space-between;
+ padding: 10px;
+ background: #8b0000;
+ font-weight: bolder;
+}
+.nav-main{
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-around;
+  
+}
+.nav-main li{
+margin: 10px;
+margin-left: 30px;
+text-decoration: none;
+}
+a{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #a80000;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 10;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #a80000;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 10;
+}
+.dropdown-menu li a {
+  padding: 10px;
+  color: white;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #b22222;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}*/
+
 
 nav {
   background-color: #8b0000;
@@ -23,9 +79,7 @@ nav {
   position: fixed;
   width: 100%;
 }
-.navbar{
-  
-}
+
 
 .logo {
   color: white;
@@ -138,7 +192,7 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsive */
+/* Responsive 
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -162,7 +216,7 @@ footer {
     font-size: 1rem;
   }
 }
-
+*/
 
 
 
@@ -170,17 +224,22 @@ footer {
   width: 5vw;
   height: 5vh;
   display: none;
+  
 }
 .menu-mobile{
   background-color:#8b0000 ;
   width: 25vw;
   font-size: 20px;
   position: fixed;
-  right: 0%;
+  right: -20%;
   padding: 10px;
   height: 100%;
   pointer-events: none;
   display: none;
+top: 8.5%;
+transition: ease 2S;
+
+  
 }
 .menu-mobile ul{
   list-style: none;
@@ -190,18 +249,28 @@ footer {
   list-style: none;
   text-decoration: none;
 }
-
-
-@media(min-width:0px) and(max-width:500px) {
-  .barmobile{
-  width: 5vw;
-  height: 5vh;
+.active-menu-mobile{
   display: block;
+  pointer-events: all;
+  transition: ease 2S;
+  right: 0%;
+  
 }
-.blocnav{
-  display: none;
+
+
+@media (max-width: 767px) {
+  .barmobile {
+    display: block;
+    pointer-events: all;
+    
+
+  }
+  .blocnav {
+    display: none;
+  }
 }
-}
+
+
 
 
 
