@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <nav>
+<nav>
     <div class="logo">Winner Agency</div>
     <ul class="nav-main">
       <li><a href="home.html">home</a></li>
@@ -19,13 +19,13 @@
       <li><a href="download.html">download</a></li>
       <li><a href="contact.html">contact</a></li>
       <li class="dropdown">
-        <a href="userspace.html">user space ▾</a>
+        <a href="user space">user space ▾</a>
         <ul class="dropdown-menu">
           <li><a href="connection.html">Connection</a></li>
-          <li><a href="registation.html">registration</a></li>
+          <li><a href="registration.html">registration</a></li>
           <li><a href="userspace.html">user space</a></li>
-          <li><a href="dashclient.html">Dashboard client</a></li>
-          <li><a href="dashadmin.html">Dashboard admin</a></li>
+          <li><a href="dashboard client.html">Dashboard client</a></li>
+          <li><a href="dashboard admin.html">Dashboard admin</a></li>
         </ul>
       </li>
       <li><a href="testimonial.html">testimonials</a></li>
@@ -68,38 +68,7 @@
 
 
 
-  <script >
-    document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('reservationForm');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const date = form.date.value;
-    const type = form.type.value;
-
-    if (!name || !email || !date || !type) {
-      alert("Veuillez remplir tous les champs obligatoires.");
-      return;
-    }
-    if (!validateEmail(email)) {
-      alert("Adresse email invalide.");
-      return;
-    }
-
-    alert("Votre réservation a été envoyée avec succès !");
-    form.reset();
-  });
-
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email.toLowerCase());
-  }
-});
-
-  </script>
+  <script src="reservation.js"> </script>
 </body>
 </html>
 
