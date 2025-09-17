@@ -89,7 +89,7 @@ nav .logo {
   }
 }
 
-/* Responsive */
+/* Responsive *//* 
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -104,7 +104,7 @@ nav .logo {
     width: 100%;
   }
 
-  /* Dropdown menu should be static on mobile */
+  /* Dropdown menu should be static on mobile *//* 
   .dropdown-menu {
     position: static;
     box-shadow: none;
@@ -114,7 +114,7 @@ nav .logo {
   .dropdown-menu li a {
     padding-left: 30px;
   }
-}
+}*/
 
 /* Main client area */
 .client-area {
@@ -187,6 +187,66 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+
+
+
+.barmobile{
+  width: 5vw;
+  height: 5vh;
+  display: none;
+  
+}
+.menu-mobile{
+  background-color:#8b0000 ;
+  width: 25vw;
+  font-size: 20px;
+  position: absolute;
+  right: -35vw;
+  padding: 10px;
+  height: 100%;
+  pointer-events: none;
+  display: none;
+top: 8.5%;
+transition: 20S;
+
+  
+}
+.menu-mobile ul{
+  list-style: none;
+}
+.menu-mobile ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+.active-menu-mobile{
+  display: block;
+  pointer-events: all;
+  transition: ease 20S;
+  right: 0vw;
+  
+}
+
+
+@media (max-width: 767px) {
+  .barmobile {
+    display: block;
+    pointer-events: all;
+    
+
+  }
+  .blocnav {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
 
 
 

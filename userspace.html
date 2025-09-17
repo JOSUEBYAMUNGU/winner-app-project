@@ -10,6 +10,7 @@
 <body>
 <nav>
     <div class="logo">Winner Agency</div>
+    <div class="blocnav">
     <ul class="nav-main">
       <li><a href="home.html">home</a></li>
       <li><a href="service.html">services</a></li>
@@ -30,7 +31,33 @@
       <li><a href="testimonial.html">testimonials</a></li>
       <li><a href="about.html">about</a></li>
     </ul>
+</div>
+
+
+ <svg class="barmobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
   </nav>
+
+<!--bloc nav respo-->
+     <div class="menu-mobile">
+    <ul class="">
+      <li><a href="home.html">home</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="reservetion.html">reservation</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="download.html">download</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="connection.html">Connection</a></li>
+      <li><a href="registation.html">registration</a></li>
+      <li><a href="userspace.html">user space</a></li>
+      <li><a href="dashclient.html">Dashboard client</a></li>
+      <li><a href="dashadmin.html">Dashboard admin</a></li>
+      <li><a href="testimonial.html">testimonials</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+    </div>
 
 
 
@@ -91,6 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+let barmobile=document.querySelector('.barmobile')
+
+   barmobile.addEventListener('click',
+    ()=>{
+      document.querySelector('.menu-mobile').classList.toggle('active-menu-mobile')
+    }
+   )
 
 
   </script>
